@@ -1,0 +1,638 @@
+@charset "UTF-8";
+
+
+/* general style */
+html{
+    box-sizing: border-box;
+}
+* {
+    box-sizing: inherit;
+}
+
+body {
+    background: rgb(248, 255, 186);
+    margin: 0;
+}
+
+h1 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #473021;
+    font-size: 3em;
+}
+
+h2 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #34570c; 
+    font-size: xx-large;
+}
+
+h3 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #4b372b; 
+    font-size: x-large;
+}
+
+
+p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #4d3627;
+    font-size: large;
+}
+
+img {
+    max-width: 100%;
+}
+
+li {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #4d3627;
+    font-size: large;
+    font-weight: bold;
+    list-style: none;
+}
+
+li.logo {
+    margin-right: auto;
+    color: white;
+}
+
+img.logo {
+    max-width: 100%;
+}
+
+button{
+    border-radius: 8px;
+    background-color:#34570c;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+
+}
+
+/* nav style */
+
+.main_nav{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    background-color: rgb(53, 77, 26);
+    padding: .3em;
+    margin: 0;
+}
+
+.main_nav a{
+    color: white;
+    padding:40px 20px;
+    text-decoration: none;
+}
+
+.main_nav a:hover {
+background-color: white;
+color: rgb(53, 77, 26);
+}
+
+/* index */
+.welcome {
+    text-align: center;
+}
+
+.hero_image{
+    background-image:linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),url(images/pexels_cottage.jpg);
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.hero_header {
+    text-align: center;
+    color: #473021;
+    top:40%;
+    font-size: 4em;
+    margin: 20px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.button {
+    background-color: #4C7E14;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 6px 3px;
+    padding: 20px 40px;
+    cursor: pointer;
+    }
+
+ 
+
+/* index grid */
+
+#grid_index {
+    align-items: center;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(7, auto);
+    grid-template-areas:
+'welcome            welcome             welcome'
+'amenities_title    amenities_title amenities_title'
+'hl1                hl2                 hl3'
+'dividerimg         dividerimg          dividerimg'
+'room_title         room_title          room_title'
+'r1                 r2                  r3'
+'footer             footer              footer'
+;
+}
+
+
+.welcome{
+    grid-area: welcome;
+    object-fit: cover;
+    text-align: center;
+}
+
+.room_title {
+    grid-area: room_title;
+    object-fit: cover;
+    text-align: center;
+}
+
+.amenities{
+    grid-area: amenities_title;
+    object-fit: cover;
+    text-align: center;
+    
+}
+.hl1{
+    grid-area: hl1;
+    object-fit: cover;
+    text-align: center;
+}
+.hl2{
+   grid-area: hl2;
+   object-fit: cover;
+   text-align: center;
+}
+.hl3{
+   grid-area: hl3;
+   object-fit: cover;
+   text-align: center;
+}
+
+
+.dividerimg {
+    background-image:linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),url(images/AdobeStock_forest_resized.jpg);
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    grid-area: dividerimg;
+}
+
+.about_header {
+    text-align: center;
+    position: absolute;
+    color: #98e243;
+    top: 30%;
+    left: 46%;
+    text-shadow: .05em .05em .1em black;
+    font-size: 2em;
+    
+}
+
+.about_text {
+    text-align: center;
+    position: absolute;
+    color: rgb(231, 228, 228);
+    top: 40%;
+    text-shadow: .05em .05em .1em black;
+    font-size: large;
+    padding: 85px;
+}
+
+
+.about{
+    grid-area: about;
+    object-fit: cover;
+    text-align: center;
+}
+
+.r1{
+     grid-area: r1;
+     object-fit: cover;
+     text-align: center;
+}
+.r2{
+    grid-area: r2;
+    object-fit: cover;
+    text-align: center;
+}
+.r3{
+    grid-area: r3;
+    object-fit: cover;
+    text-align: center;
+}
+.footer{
+    grid-area: footer;
+    object-fit: cover;
+    text-align: center;
+}
+
+img.roompic:hover {
+    transform: scale(1.05);
+}
+
+
+
+
+
+/* contact grid */
+#grid_contact {
+    display: grid;
+    grid-gap: 0px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: 
+    'title      title'
+    'info1      info2'
+    'socials    socials'
+    'footer     footer'
+    ;
+}
+
+.title{
+    grid-area: title;
+    object-fit: cover;
+    text-align: center;
+}
+
+.info1{
+    grid-area: info1;
+    object-fit: cover;
+    text-align: center;
+}
+
+.info2{
+    grid-area: info2;
+    object-fit: cover;
+    text-align: center;
+}
+
+.socials{
+    grid-area: socials;
+    object-fit: cover;
+    justify-content: center;
+    text-align: center;
+}
+
+.mediaicons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.footer2{
+    grid-area: footer;
+    object-fit: cover;
+    text-align: center;
+}
+
+
+
+img.igicon, img.twticon, img.fbicon {
+    width: 200px;
+    height: 50px;
+}
+
+/* about grid */
+#grid_about {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: 
+    'about      about'
+    'location   location'
+    'gallery    gallery'    
+    'footer     footer'
+    ;
+}
+
+
+.about  {
+    grid-area: about;
+    object-fit: cover;
+}
+
+.location {
+    grid-area: location;
+    object-fit: cover;
+    text-align: center;
+}
+
+
+.footer3{
+    grid-area: footer;
+    object-fit: cover;
+    text-align: center;
+}
+
+#gallery {
+    grid-area: gallery;
+    object-fit: cover;
+}
+
+/* grid img gallery */
+
+#gallery {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(300px,1fr));
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 15px;
+    justify-content: center;
+}
+
+/* rooms grid */
+#grid_rooms {
+    text-align: center;
+    display: grid;
+    justify-content: center;
+    grid-gap: 10px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+    'rooms'
+    'footer'
+    ;
+}
+
+.footer4{
+    grid-area: footer;
+    object-fit: cover;
+    text-align: center;
+}
+
+.rooms {
+    grid-area: rooms;
+    object-fit: cover;
+    text-align: center;
+    justify-content: center;
+}
+
+.ul {
+    object-fit: cover;
+    text-align: center;
+    margin: 30px;  
+}
+
+/* media queries */ 
+
+/* index media queries */
+@media screen and (max-width: 1200px) {
+    #grid_index {
+    align-items: center;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(7, auto);
+    grid-template-areas:
+'welcome            welcome             welcome'
+'amenities_title    amenities_title     amenities_title'
+'hl1                hl2                 hl3'
+'dividerimg         dividerimg          dividerimg'
+'room_title         room_title          room_title'
+'r1                 r2                  r3'
+'footer             footer              footer'
+;
+}    
+}
+
+@media screen and (max-width: 800px) {
+    #grid_index {
+        align-items: center;
+        display: grid;
+        grid-gap: 30px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(9, auto);
+        grid-template-areas:
+    'welcome            welcome'
+    'amenities_title    amenities_title'
+    'hl1                hl2'
+    'hl3                hl3'
+    'dividerimg         dividerimg'
+    'room_title         room_title'
+    'r1                 r2'
+    'r3                 r3'
+    'footer             footer'
+    ;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #grid_index {
+        align-items: center;
+        display: grid;
+        grid-gap: 30px;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(11, auto);
+        grid-template-areas:
+    'welcome'
+    'amenities_title'
+    'hl1'
+    'hl2'
+    'hl3'
+    'dividerimg'
+    'room_title'
+    'r1'
+    'r2'
+    'r3'
+    'footer'
+    ;
+
+    }
+}
+
+/* contact media queries */
+@media screen and (max-width: 1200px) {
+    #grid_contact {
+        display: grid;
+        grid-gap: 0px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas: 
+        'title      title'
+        'info1      info2'
+        'socials    socials'
+        'footer     footer'
+        ;
+    }
+    
+    
+}
+
+@media screen and (max-width: 800px) {
+
+    #grid_contact {
+        display: grid;
+        grid-gap: 0px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas: 
+        'title      title'
+        'info1      info2'
+        'socials    socials'
+        'footer     footer'
+        ;
+    }
+    
+}
+
+@media screen and (max-width: 600px) {
+    #grid_contact {
+        display: grid;
+        grid-gap: 0px;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, auto);
+        grid-template-areas: 
+        'title'
+        'info1'      
+        'info2'
+        'socials'
+        'footer'
+        ;
+    }
+    
+}
+
+
+/* about media queries */
+@media screen and (max-width: 1200px) {
+    #grid_about {
+        display: grid;
+        grid-gap: 30px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas: 
+        'about      about'
+        'location   location'
+        'gallery    gallery'    
+        'footer     footer'
+        ;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #grid_about {
+        display: grid;
+        grid-gap: 30px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas: 
+        'about      about'
+        'location   location'
+        'gallery    gallery'    
+        'footer     footer'
+        ;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #grid_about {
+        display: grid;
+        grid-gap: 30px;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas: 
+        'about'      
+        'location'
+        'gallery'    
+        'footer'
+        ;
+    }
+}
+
+
+
+/* rooms media queries */
+@media screen and (max-width: 1200px) {
+    #grid_rooms {
+        text-align: center;
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas: 
+        'rooms'
+        'footer'
+        ;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #grid_rooms {
+        text-align: center;
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas: 
+        'rooms'
+        'footer'
+        ;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #grid_rooms {
+        text-align: center;
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas: 
+        'rooms'
+        'footer'
+        ;
+    }
+}
+
+/* gallery media queries */
+@media screen and (max-width: 1200px) {
+    #gallery {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(300px,1fr));
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 15px;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #gallery {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(300px,1fr));
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 15px;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #gallery {
+        display: grid;
+        grid-template-columns: repeat(1, minmax(300px,1fr));
+        grid-template-rows: 1fr;
+        grid-gap: 15px;
+        justify-content: center;
+    }
+}
